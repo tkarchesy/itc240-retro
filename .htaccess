@@ -1,0 +1,13 @@
+#place this in the root of your domain space to replace a generic 404 (file not found)
+#error with your custom 404 page.
+
+#replace example.com with your domain
+
+#the following disallows access to our file (for security)
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+#the following redirects users to a custom 404 error page instead of a generic browser warning
+ErrorDocument 404 http://itc240.karchesy.com/error-404.php
